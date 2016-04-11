@@ -1,0 +1,53 @@
+{
+  "name": "jquery-fancybox",
+  "version": "3.0.0",
+  "description": "jquery-fancybox",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dr-martin/jquery-fancybox.git"
+  },
+  "keywords": [
+    "fancybox",
+    "jquery"
+  ],
+  "author": {
+    "name": "Daniel Reyes",
+    "email": "drmartin@outlook.com",
+    "url": "https://github.com/dr-martin"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dr-martin/jquery-fancybox/issues"
+  },
+  "homepage": "https://github.com/dr-martin/jquery-fancybox#readme",
+  "_id": "jquery-fancybox@3.0.0",
+  "_shasum": "914bca8ee997af785b6d86ae86395adf1f8eeffd",
+  "_from": "jquery-fancybox@>=3.0.0 <4.0.0",
+  "_npmVersion": "3.8.0",
+  "_nodeVersion": "0.10.35",
+  "_npmUser": {
+    "name": "drmartin",
+    "email": "drmartinkf@gmail.com"
+  },
+  "dist": {
+    "shasum": "914bca8ee997af785b6d86ae86395adf1f8eeffd",
+    "tarball": "https://registry.npmjs.org/jquery-fancybox/-/jquery-fancybox-3.0.0.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "drmartin",
+      "email": "drmartinkf@gmail.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/jquery-fancybox-3.0.0.tgz_1457339056591_0.5976430485025048"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/jquery-fancybox/-/jquery-fancybox-3.0.0.tgz",
+  "readme": "ERROR: No README data found!"
+}
