@@ -1,34 +1,35 @@
 /**
  * Created by Administrator on 2016/4/14.
  */
+
 'use strict';
 
-angular.module('myApp.daily_textile', ['ngRoute'])
+angular.module('myApp.wedding_textile', ['ngRoute'])
 
     .config(['$routeProvider', function($routeProvider) {
-        $routeProvider.when('/daily_textile', {
-            templateUrl: 'daily_textile/daily_textile.html',
-            controller: 'DailyTextileCtl'
+        $routeProvider.when('/wedding_textile', {
+            templateUrl: 'wedding_textile/wedding_textile.html',
+            controller: 'WeddingTextileCtl'
         });
     }])
 
-    .controller('DailyTextileCtl', function($scope, $http, DailyTextile, utilFun) {
+    .controller('WeddingTextileCtl', function($scope, $http, WeddingTextile, utilFun) {
 
-        utilFun.enableMenuTitle('daily-textile');
-        $scope.dailyTextile = new DailyTextile();
+        utilFun.enableMenuTitle('wedding-textile');
+        $scope.weddingTextile = new WeddingTextile();
     })
-    .factory('DailyTextile', function($http) {
-        var DailyTextile = function() {
+    .factory('WeddingTextile', function($http) {
+        var WeddingTextile = function() {
             this.items = [];
             this.busy = false;
             this.after = '';
         };
 
-        DailyTextile.prototype.nextPage = function() {
+        WeddingTextile.prototype.nextPage = function() {
             if (this.busy) return;
             this.busy = true;
 
-            $http.get('mock/daily_textile.json')
+            $http.get('mock/wedding_textile.json')
                 .success(function(response){
                     var that = this;
                     response.forEach(function(product){
@@ -39,5 +40,5 @@ angular.module('myApp.daily_textile', ['ngRoute'])
                 }.bind(this));
         };
 
-        return DailyTextile;
+        return WeddingTextile;
     });

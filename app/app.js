@@ -5,7 +5,9 @@ angular.module('myApp', [
   'ngRoute',
   'infinite-scroll',
   'myApp.new_product',
-    'myApp.daily_textile'
+    'myApp.daily_textile',
+  'myApp.wedding_textile'
+
 ])
     .config(['$routeProvider', function($routeProvider) {
       $routeProvider.otherwise({redirectTo: '/new_product'});
