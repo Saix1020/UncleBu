@@ -12,11 +12,7 @@ angular.module('myApp.new_product', ['ngRoute'])
     .controller('NewProductCtl', function($scope, utilFun) {
 
         utilFun.enableMenuTitle('new-product');
-
-        //$scope.$on('$viewContentLoaded', function(){
-        //
-        //});
-
+        $scope.title = '新品介绍';
 
     })
     .directive('newProduct', function($http, $q, utilFun,  $timeout){
