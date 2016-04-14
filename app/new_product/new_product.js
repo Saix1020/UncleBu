@@ -10,10 +10,7 @@ angular.module('myApp.new_product', ['ngRoute'])
     }])
 
     .controller('NewProductCtl', function($scope, utilFun) {
-
         utilFun.enableMenuTitle('new-product');
-        $scope.title = '新品介绍';
-
     })
     .directive('newProduct', function($http, $q, utilFun,  $timeout){
         return {
@@ -52,7 +49,7 @@ angular.module('myApp.new_product', ['ngRoute'])
                 scope.loadNewProduct();
 
                 scope.renderElement = function(){
-                    $(this).addClass("animated fadeInDown").show();
+                    $('#new-product-content').addClass("animated fadeInDown").show();
                     $(".overlay").hide();
                     $('.gallery-item').hover(
                         function() {
@@ -67,6 +64,8 @@ angular.module('myApp.new_product', ['ngRoute'])
                         $('[data-rel="lightbox"]').lightbox();
                     });
                 };
+
+                $('#new-product-content').hide();
 
                 scope.$on('ngRepeatFinished', function (){
                     scope.renderElement();

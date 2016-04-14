@@ -13,10 +13,15 @@ angular.module('myApp.wedding_textile', ['ngRoute'])
         });
     }])
 
-    .controller('WeddingTextileCtl', function($scope, $http, WeddingTextile, utilFun) {
+    .controller('WeddingTextileCtl', function($scope, $http, $timeout, WeddingTextile, utilFun) {
 
         utilFun.enableMenuTitle('wedding-textile');
         $scope.weddingTextile = new WeddingTextile();
+
+        $('#wedding-textile-content').hide();
+        $timeout(function(){
+            $('#wedding-textile-content').addClass("animated fadeInDown").show();
+        })
     })
     .factory('WeddingTextile', function($http) {
         var WeddingTextile = function() {

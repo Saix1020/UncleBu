@@ -12,10 +12,16 @@ angular.module('myApp.daily_textile', ['ngRoute'])
         });
     }])
 
-    .controller('DailyTextileCtl', function($scope, $http, DailyTextile, utilFun) {
+    .controller('DailyTextileCtl', function($scope, $http, $timeout, DailyTextile, utilFun) {
 
         utilFun.enableMenuTitle('daily-textile');
         $scope.dailyTextile = new DailyTextile();
+
+        $('#daily-textile-content').hide();
+        $timeout(function(){
+            $('#daily-textile-content').addClass("animated fadeInDown").show();
+        })
+
     })
     .factory('DailyTextile', function($http) {
         var DailyTextile = function() {
