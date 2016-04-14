@@ -16,6 +16,7 @@
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700,800' rel='stylesheet' type='text/css'>
 
   <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!--<link href="lib/angular-ui-bootstrap/dist/ui-bo" rel="stylesheet">-->
   <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/templatemo_misc.css">
@@ -26,34 +27,17 @@
 <body>
 <div class="site-header">
   <div class="main-navigation">
-    <div class="pull-left"><div class="milky">Uncle Bu</div> </div>
-    <!--<div class="responsive_menu">-->
-      <!--<ul>-->
-        <!--<li><a class="show-1 templatemo_home" href="#">新品介绍</a></li>-->
-        <!--<li><a class="show-2 templatemo_page2" href="#">日用家纺</a></li>-->
-        <!--<li><a class="show-2 templatemo_page2" href="#">婚庆家纺</a></li>-->
-        <!--<li><a class="show-3 templatemo_page3" href="#">婚庆服务</a></li>-->
-        <!--&lt;!&ndash;<li><a class="show-3 templatemo_page3" href="#">企业服务</a></li>&ndash;&gt;-->
-        <!--<li><a class="show-4 templatemo_page4" href="#">关于我们</a></li>-->
-        <!--<li><a class="show-5 templatemo_page5" href="#">联系我们</a></li>-->
-        <!--&lt;!&ndash;<li><a class="show-5 templatemo_page5" href="#">加盟合作</a></li>&ndash;&gt;-->
-      <!--</ul>-->
-    <!--</div>-->
+    <div class="pull-left"><div class="milky">布爷爷</div> </div>
     <div class="container">
       <div class="row">
-        <!--<div class="col-md-12 responsive-menu">-->
-          <!--<a href="#" class="menu-toggle-btn">-->
-            <!--<i class="fa fa-bars"></i>-->
-          <!--</a>-->
-        <!--</div> &lt;!&ndash; /.col-md-12 &ndash;&gt;-->
         <div class="col-md-12 main_menu">
           <ul>
             <li id="new-product"><a href="#/new_product">新品介绍</a></li>
             <li id="daily-textile"><a href="#/daily_textile">日用家纺</a></li>
             <li id="wedding-textile"><a href="#/wedding_textile">婚庆家纺</a></li>
-            <li id="wedding-service"><a href="">婚庆服务</a></li>
-            <li id="about-us"><a href="">关于我们</a></li>
-            <li id="contact-us"><a href="">联系我们</a></li>
+            <li id="wedding-service"><a href="#/wedding_service">婚庆服务</a></li>
+            <li id="about-us"><a href="#/about_us">关于我们</a></li>
+            <li id="contact-us"><a href="#/contact_us">联系我们</a></li>
           </ul>
         </div> <!-- /.col-md-12 -->
       </div> <!-- /.row -->
@@ -65,15 +49,15 @@
 
 <div ng-view></div>
 
-<div id="templatemo_footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 text-center">
-        <p>Copyright &copy; 2084 Your Company Name | More Templates</p>
-      </div> <!-- /.col-md-12 -->
-    </div> <!-- /.row -->
-  </div> <!-- /.container -->
-</div> <!-- /.templatemo_footer -->
+<!--<div id="templatemo_footer">-->
+  <!--<div class="container">-->
+    <!--<div class="row">-->
+      <!--<div class="col-md-12 text-center">-->
+        <!--<p>Copyright &copy; 2084 Your Company Name | More Templates</p>-->
+      <!--</div> &lt;!&ndash; /.col-md-12 &ndash;&gt;-->
+    <!--</div> &lt;!&ndash; /.row &ndash;&gt;-->
+  <!--</div> &lt;!&ndash; /.container &ndash;&gt;-->
+<!--</div> &lt;!&ndash; /.templatemo_footer &ndash;&gt;-->
 
 
 <!-- In production use:
@@ -83,16 +67,17 @@
 <script src="lib/angular-route/angular-route.js"></script>
 <script src="lib/jquery/dist/jquery.min.js"></script>
 <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+<script src="lib/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
 <script src="lib/js/jquery-migrate-1.2.1.min.js"></script>
 <script src="lib/js/modernizr.js"></script>
-<script src="lib/js/tabs.js"></script>
 <script src="lib/js/jquery.lightbox.js"></script>
-<script src="lib/js/templatemo_custom.js"></script>
 <script src='lib/ng-infinite-scroll/build/ng-infinite-scroll.js'></script>
 <script src="app.js"></script>
 <script src="new_product/new_product.js"></script>
 <script src="daily_textile/daily_textile.js"></script>
 <script src="wedding_textile/wedding_textile.js"></script>
-
+<script src="wedding_service/wedding_service.js"></script>
+<script src="about_us/about_us.js"></script>
+<script src="contact_us/contact_us.js"></script>
 </body>
 </html>
