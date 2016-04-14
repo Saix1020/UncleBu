@@ -1,0 +1,35 @@
+<page-head title="'日用家纺'"></page-head>
+<!--<new-product></new-product>-->
+
+<div class="content products" id="menu-2">
+    <div class="container" style="min-height: 480px;">
+        <div infinite-scroll='dailyTextile.nextPage()' infinite-scroll-disabled='dailyTextile.busy' infinite-scroll-distance='0'
+             infinite-scroll-use-document-bottom="true">
+            <div class="row">
+                <div class="col-md-4 col-sm-6" ng-repeat="item in dailyTextile.items">
+                    <div class="product-item">
+                        <img ng-src="{{item.url}}" alt="product 1">
+                        <a href="" class="product-title">{{item.title}}</a>
+                        <p>{{item.desc}}</p>
+                    </div> <!-- /.product-item -->
+                </div> <!-- /.col-md-4 -->
+            </div>
+        </div> <!-- /.row -->
+        <div ng-show='dailyTextile.busy'>Loading data...</div>
+
+    </div> <!-- /.slide-item -->
+</div> <!-- /.products -->
+
+<!--<div infinite-scroll='reddit.nextPage()' infinite-scroll-disabled='reddit.busy' infinite-scroll-distance='1'>-->
+    <!--<div ng-repeat='item in reddit.items'>-->
+        <!--<span class='score'>{{item.score}}</span>-->
+      <!--<span class='title'>-->
+        <!--<a ng-href='{{item.url}}' target='_blank'>{{item.title}}</a>-->
+      <!--</span>-->
+        <!--<small>by {{item.author}} - -->
+            <!--<a ng-href='http://reddit.com{{item.permalink}}' target='_blank'>{{item.num_comments}} comments</a>-->
+        <!--</small>-->
+        <!--<div style='clear: both;'></div>-->
+    <!--</div>-->
+    <!--<div ng-show='reddit.busy'>Loading data...</div>-->
+<!--</div>-->

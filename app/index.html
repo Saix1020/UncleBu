@@ -48,8 +48,8 @@
         <!--</div> &lt;!&ndash; /.col-md-12 &ndash;&gt;-->
         <div class="col-md-12 main_menu">
           <ul>
-            <li id="new-product"><a href="">新品介绍</a></li>
-            <li id="daily-textile"><a href="">日用家纺</a></li>
+            <li id="new-product"><a href="#/new_product">新品介绍</a></li>
+            <li id="daily-textile"><a href="#/daily_textile">日用家纺</a></li>
             <li id="wedding-textile"><a href="">婚庆家纺</a></li>
             <li id="wedding-service"><a href="">婚庆服务</a></li>
             <li id="about-us"><a href="">关于我们</a></li>
@@ -60,13 +60,7 @@
     </div>
     <!--<a class="navigation-bg" href="#" title=""  target="_blank"><img src="images/header.png" alt=""  /></a>&lt;!&ndash; /.container &ndash;&gt;-->
   </div> <!-- /.main-navigation -->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 text-center templatemo_logo">
-          <h1 id="page-title" style="color: #b10021">新品介绍</h1>
-      </div> <!-- /.col-md-12 -->
-    </div> <!-- /.row -->
-  </div> <!-- /.container -->
+
 </div> <!-- /.site-header -->
 
 <div ng-view></div>
@@ -87,7 +81,6 @@
 -->
 <script src="lib/angular/angular.js"></script>
 <script src="lib/angular-route/angular-route.js"></script>
-
 <script src="lib/jquery/dist/jquery.min.js"></script>
 <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
 <script src="lib/js/jquery-migrate-1.2.1.min.js"></script>
@@ -95,7 +88,9 @@
 <script src="lib/js/tabs.js"></script>
 <script src="lib/js/jquery.lightbox.js"></script>
 <script src="lib/js/templatemo_custom.js"></script>
+<script src='lib/ng-infinite-scroll/build/ng-infinite-scroll.js'></script>
 <script src="app.js"></script>
 <script src="new_product/new_product.js"></script>
+<script src="daily_textile/daily_textile.js"></script>
 </body>
 </html>

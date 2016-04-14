@@ -3,7 +3,9 @@
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
   'ngRoute',
-  'myApp.new_product'
+  'infinite-scroll',
+  'myApp.new_product',
+    'myApp.daily_textile'
 ])
     .config(['$routeProvider', function($routeProvider) {
       $routeProvider.otherwise({redirectTo: '/new_product'});
@@ -56,4 +58,21 @@ angular.module('myApp', [
           }
         }
       };
-    });;
+    })
+    .directive('pageHead', function(){
+      return {
+        restrict : 'EA',
+        replace : true,
+        transclude : true,
+        scope : {
+          title : '='
+        },
+        template :
+        '<div class="container">'+
+        '<div class="row">'+
+        '<div class="col-md-12 text-center templatemo_logo">'+
+        '<h1 style="color: #b10021">{{title}}</h1>'+
+        '</div></div></div>'
+      }
+
+    });
