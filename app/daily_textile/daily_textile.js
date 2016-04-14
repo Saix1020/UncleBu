@@ -12,7 +12,7 @@ angular.module('myApp.daily_textile', ['ngRoute'])
         });
     }])
 
-    .controller('DailyTextileCtl', function($scope, $http, $timeout, DailyTextile, utilFun) {
+    .controller('DailyTextileCtl', function($scope, $http, $timeout, $uibModal, DailyTextile, utilFun) {
 
         utilFun.enableMenuTitle('daily-textile');
         $scope.dailyTextile = new DailyTextile();
@@ -20,8 +20,37 @@ angular.module('myApp.daily_textile', ['ngRoute'])
         $('#daily-textile-content').hide();
         $timeout(function(){
             $('#daily-textile-content').addClass("animated fadeInDown").show();
-        })
+        });
 
+
+        $scope.showProductDetail = function(product){
+
+            var modalInstance = $uibModal.open({
+                templateUrl: 'template/product_detail.html',
+                controller: 'ModalProductDetailCtrl',
+                size: 'lg',
+                resolve: {
+                    productInfo : function() {
+                        return product;
+                    }
+                }
+            });
+            modalInstance.opened.then(function () {
+
+            });
+            modalInstance.result.then(function (result) {
+                console.log(result);
+            }, function (reason) {
+                console.log(reason);
+            });
+
+            $scope.$on("$destroy", function() {
+                modalInstance.dismiss();
+            });
+        }
+    })
+    .controller('ModalProductDetailCtrl', function($scope, $http, productInfo){
+        $scope.product = productInfo;
     })
     .factory('DailyTextile', function($http) {
         var DailyTextile = function() {

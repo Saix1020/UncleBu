@@ -7,7 +7,7 @@
              infinite-scroll-use-document-bottom="true">
             <div class="row">
                 <div class="col-md-4 col-sm-6" ng-repeat="item in dailyTextile.items">
-                    <div class="product-item">
+                    <div class="product-item" ng-click="showProductDetail(item)">
                         <img ng-src="{{item.url}}" alt="product 1">
                         <a href="" class="product-title">{{item.title}}</a>
                         <p>{{item.desc}}</p>

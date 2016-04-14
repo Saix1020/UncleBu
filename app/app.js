@@ -3,6 +3,7 @@
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
   'ngRoute',
+    'ui.bootstrap',
   'infinite-scroll',
   'myApp.new_product',
     'myApp.daily_textile',
